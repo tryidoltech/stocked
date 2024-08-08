@@ -298,6 +298,53 @@ button:hover {
     color: #666666;
 }
 /* ================================================================================= */
+/*---------------------------------Code For coach-section--------------------------- */
+/* ================================================================================= */
+
+.coach-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f7f7f7;
+    color: #333333;
+}
+
+.coach-section h1 {
+    color: #0056d2;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.coach-section p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666666;
+}
+.coach-section-button{
+    background-color: yellow;
+    height: 60px;
+    width: 150px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+
+/* ================================================================================= */
+/*---------------------------------Code For courses-section--------------------------- */
+/* ================================================================================= */
+
+
+
+
+
+
+
+
+/* ================================================================================= */
 /*------------------------------Media Query for tablets----------------------------- */
 /* ================================================================================= */
 
@@ -474,6 +521,18 @@ button:hover {
   }
   .stat {
     width: 100%;
+}
+.coach-section {
+    padding: 30px;
+}
+
+.coach-section h1 {
+    font-size: 20px;
+}
+
+.coach-section p {
+    font-size: 16px;
+    margin: 0 auto 20px;
 }
 
 }
