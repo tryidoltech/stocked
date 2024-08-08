@@ -1,502 +1,482 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Basic reset and font styling */
 body,
 html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
-
 /* Hide the scrollbar */
 ::-webkit-scrollbar {
-    width: 0;
+  width: 0;
 }
 
-/* Navbar styling */
+/* ================================================================================= */
+/*--------------------------------- Navbar styling---------------------------------- */
+/* ================================================================================= */
+
 .navbar {
-    position: fixed;
-    /* Fixed position at the top */
-    top: 0px;
-    width: 100vw;
-    height: 70px;
-    padding: 3px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 20px;
-    align-items: center;
-    border-top: 1px solid rgba(106, 106, 106, 0.799);
-    border-bottom: 1px solid rgba(106, 106, 106, 0.799);
-    z-index: 3;
-    /* Ensure it is above other content */
-    transition: background-color 0.3s, box-shadow 0.3s;
-    /* Smooth transition for background color and shadow */
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 70px;
+  padding: 3px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+  align-items: center;
+  border-top: 1px solid rgba(106, 106, 106, 0.799);
+  border-bottom: 1px solid rgba(106, 106, 106, 0.799);
+  z-index: 3;
+  /* Ensure it is above other content */
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
-
-
-
-
 /* Navbar shadow for better separation */
 .navbar.scrolled {
-    background-color: rgb(0, 0, 0);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 /* Container for navbar items */
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    height: 100%;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
 }
-
 /* Brand or logo styling */
 .brand img {
-    height: 60px;
-    width: 180px;
-    margin-right: 13px;
+  height: 60px;
+  width: 180px;
+  margin-right: 13px;
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px solid rgba(106, 106, 106, 0.799);
-    ;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(106, 106, 106, 0.799);
 }
-
 /* Navigation menu styling */
 .nav-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    margin-left: auto;
-    /* Push menu to the right */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-left: auto;
+  /* Push menu to the right */
 }
 
 .nav-container button {
-    background-color: yellow;
-    height: 50px;
-    width: 140px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
+  background-color: yellow;
+  height: 50px;
+  width: 140px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
 }
 
 .nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 12px 10px;
-    /* Padding around each link */
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 1px 10px;
 }
-
 /* Default toggle button style */
 .nav-toggle {
-    /* display: flex; */
-    display: none;
-
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
-
 .nav-toggle span {
-    width: 30px;
-    height: 3px;
-    background-color: rgb(243, 243, 243);
-    transition: transform 0.3s, opacity 0.3s;
+  width: 30px;
+  height: 3px;
+  background-color: rgb(243, 243, 243);
+  transition: transform 0.3s, opacity 0.3s;
 }
-
 /* Cross state styles */
 .nav-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .nav-toggle.active span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .nav-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Slider container styling */
+/* ================================================================================= */
+/*---------------------------------Slider container styling------------------------- */
+/* ================================================================================= */
+
 .slider {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Flex display for slides */
 .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 /* Individual slide styling */
 .slide {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 .slide img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center;
-
-
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Text content styling */
 .text-content {
-    position: absolute;
-    top: 60%;
-    left: 20%;
-    transform: translateY(-50%);
-    color: white;
-    text-align: left;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    font-size: 13px;
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 13px;
 }
 
 .text-content p,
 h1 {
-    width: 50%;
-    font-weight: normal;
+  width: 50%;
+  font-weight: normal;
 }
 
 .text-content h1 {
-    color: rgb(255, 162, 56);
-    text-transform: uppercase;
-
+  color: rgb(255, 162, 56);
+  text-transform: uppercase;
 }
 
 .text-content h1 {
-    margin: 0;
-    font-size: 3em;
-    /* Increase size of h1 */
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+  margin: 0;
+  font-size: 3em;
+  /* Increase size of h1 */
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 .text-content p {
-    margin: 10px 0 0;
-    font-size: 1.5em;
-    /* Increase size of p */
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+  margin: 10px 0 0;
+  font-size: 1.5em;
+  /* Increase size of p */
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 .text-content h1 {
-    animation-name: fadeInDown;
+  animation-name: fadeInDown;
 }
 
 .text-content p {
-    animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }
 
 /* Keyframes for text animations */
 @keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-70px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Slider button styling */
 .slider button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .prev {
-    left: 10px;
+  left: 10px;
 }
 
 .next {
-    right: 10px;
+  right: 10px;
 }
 
 button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* -------------------
-  #Code For Intero Page
-  --------------------- */
-
+/* ================================================================================= */
+/*---------------------------------Code For Intero Page----------------------------- */
+/* ================================================================================= */
 
 .intero-page {
-    width: 50vw;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    line-height: 2;
-    margin: 0 auto;
-    padding: 4vw;
+  width: 50vw;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 2;
+  margin: 0 auto;
+  padding: 4vw;
 
-    p {
-        text-align: center;
-        color: gray;
-    }
+  p {
+    text-align: center;
+    color: gray;
+  }
 
-    h1 {
-        text-align: center;
-        color: rgb(4, 0, 255);
-    }
+  h1 {
+    text-align: center;
+    color: rgb(4, 0, 255);
+  }
 }
-
-
 #box-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 10vw;
-    width: 70vw;
-    border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vw;
+  width: 70vw;
+  border: 1px solid red;
 }
 
 #box-wrapper .box {
-    display: flex;
-    width: 350px;
-    height: 100px;
-    border: 1px solid red;
+  display: flex;
+  width: 350px;
+  height: 100px;
+  border: 1px solid red;
 }
 
+/* ================================================================================= */
+/*------------------------------Media Query for tablets----------------------------- */
+/* ================================================================================= */
 
-
-
-
-/* Media Query for tablets */
 @media (max-width: 1024px) {
-    .slider {
-        height: 75vh;
-        /* Adjust height for tablets */
-    }
+  .slider {
+    height: 75vh;
+    /* Adjust height for tablets */
+  }
 
-    .slide {
-        height: 75vh;
-        /* Adjust height for tablets */
-    }
+  .slide {
+    height: 75vh;
+    /* Adjust height for tablets */
+  }
 
-    .slide img {
-        height: 75vh;
-        /* Adjust height for tablets */
-    }
+  .slide img {
+    height: 75vh;
+    /* Adjust height for tablets */
+  }
 
-    .text-content h1 {
-        font-size: 2.5em;
-        /* Adjust font size for tablets */
-    }
+  .text-content h1 {
+    font-size: 2.5em;
+    /* Adjust font size for tablets */
+  }
 
-    .text-content p {
-        font-size: 1.25em;
-        /* Adjust font size for tablets */
-    }
+  .text-content p {
+    font-size: 1.25em;
+    /* Adjust font size for tablets */
+  }
 
-    .nav-menu {
-        gap: 15px;
-        /* Reduce gap for tablets */
-    }
+  .nav-menu {
+    gap: 15px;
+    /* Reduce gap for tablets */
+  }
 
-    .nav-toggle {
-        display: flex;
-        /* Show toggle button on mobile */
-    }
+  .nav-toggle {
+    display: flex;
+    /* Show toggle button on mobile */
+  }
 
-    /* Display the navigation menu when toggle button is active */
-    .nav-container.active .nav-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 70px;
-        /* Adjust top position to prevent overlap with navbar */
-        right: 40px;
-        background-color: rgba(0, 0, 0, 0.818);
-        padding: 20px;
-        /* Increase padding for better touch targets */
-        border-radius: 5px;
-        width: 80%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+  /* Display the navigation menu when toggle button is active */
+  .nav-container.active .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    /* Adjust top position to prevent overlap with navbar */
+    right: 40px;
+    background-color: rgba(0, 0, 0, 0.818);
+    padding: 20px;
+    /* Increase padding for better touch targets */
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
 
-    .nav-container.active .nav-menu a {
-        color: rgb(234, 255, 0);
-        /* Change text color in mobile menu */
-        margin: 10px 0;
-        font-size: 1.2em;
-        /* Slightly larger font for readability */
-    }
+  .nav-container.active .nav-menu a {
+    color: rgb(234, 255, 0);
+    /* Change text color in mobile menu */
+    margin: 10px 0;
+    font-size: 1.2em;
+    /* Slightly larger font for readability */
+  }
 
-    /* Adjust toggle button color when scrolling */
-    .navbar.scrolled .nav-toggle span {
-        background-color: rgb(255, 255, 255);
-    }
+  /* Adjust toggle button color when scrolling */
+  .navbar.scrolled .nav-toggle span {
+    background-color: rgb(255, 255, 255);
+  }
 
-    .nav-container {
-        width: 90%;
-    }
+  .nav-container {
+    width: 90%;
+  }
 
-    .text-content p,
-    h1 {
-        width: 80%;
-    }
+  .text-content p,
+  h1 {
+    width: 80%;
+  }
 
-    .text-content {
-        left: 10%;
-    }
+  .text-content {
+    left: 10%;
+  }
 
-    .nav-menu {
-        display: none;
-        /* Hide menu on mobile by default */
-    }
-
-
-
-
+  .nav-menu {
+    display: none;
+    /* Hide menu on mobile by default */
+  }
 }
 
-/* Media Query for phones */
+/* ================================================================================= */
+/*------------------------------Media Query for phones----------------------------- */
+/* ================================================================================= */
+
 @media (max-width: 768px) {
-    .slider {
-        height: 50vh;
-        /* Adjust height for phones */
+  .slider {
+    height: 50vh;
+    /* Adjust height for phones */
+  }
+
+  .slide {
+    height: 50vh;
+    /* Adjust height for phones */
+  }
+
+  .slide img {
+    height: 50vh;
+    /* Adjust height for phones */
+  }
+
+  .text-content h1 {
+    font-size: 2em;
+    /* Adjust font size for phones */
+  }
+
+  .text-content p {
+    font-size: 1em;
+    /* Adjust font size for phones */
+  }
+
+  .nav-menu {
+    display: none;
+    /* Hide menu on mobile by default */
+  }
+
+  .nav-menu-button {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+    /* Show toggle button on mobile */
+  }
+
+  /* Display the navigation menu when toggle button is active */
+  .nav-container.active .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    /* Adjust top position to prevent overlap with navbar */
+    right: 40px;
+    background-color: rgba(0, 0, 0, 0.818);
+    padding: 20px;
+    /* Increase padding for better touch targets */
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-container.active .nav-menu a {
+    color: rgb(234, 255, 0);
+    /* Change text color in mobile menu */
+    margin: 10px 0;
+    font-size: 1.2em;
+    /* Slightly larger font for readability */
+  }
+
+  /* Adjust toggle button color when scrolling */
+  .navbar.scrolled .nav-toggle span {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .nav-container {
+    width: 90%;
+  }
+
+  .text-content p,
+  h1 {
+    width: 80%;
+  }
+
+  .text-content {
+    left: 10%;
+  }
+
+  .intero-page {
+    width: 80vw;
+    border: 1px solid red;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 3vw;
+
+    p {
+      text-align: center;
     }
 
-    .slide {
-        height: 50vh;
-        /* Adjust height for phones */
-    }
-
-    .slide img {
-        height: 50vh;
-        /* Adjust height for phones */
-    }
-
-    .text-content h1 {
-        font-size: 2em;
-        /* Adjust font size for phones */
-    }
-
-    .text-content p {
-        font-size: 1em;
-        /* Adjust font size for phones */
-    }
-
-    .nav-menu {
-        display: none;
-        /* Hide menu on mobile by default */
-    }
-
-    .nav-menu-button {
-        display: none;
-    }
-
-    .nav-toggle {
-        display: flex;
-        /* Show toggle button on mobile */
-    }
-
-    /* Display the navigation menu when toggle button is active */
-    .nav-container.active .nav-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 70px;
-        /* Adjust top position to prevent overlap with navbar */
-        right: 40px;
-        background-color: rgba(0, 0, 0, 0.818);
-        padding: 20px;
-        /* Increase padding for better touch targets */
-        border-radius: 5px;
-        width: 80%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-container.active .nav-menu a {
-        color: rgb(234, 255, 0);
-        /* Change text color in mobile menu */
-        margin: 10px 0;
-        font-size: 1.2em;
-        /* Slightly larger font for readability */
-    }
-
-    /* Adjust toggle button color when scrolling */
-    .navbar.scrolled .nav-toggle span {
-        background-color: rgb(255, 255, 255);
-    }
-
-    .nav-container {
-        width: 90%;
-    }
-
-    .text-content p,
     h1 {
-        width: 80%;
+      text-align: center;
     }
-
-    .text-content {
-        left: 10%;
-    }
-
-    .intero-page {
-        width: 80vw;
-        border: 1px solid red;
-        line-height: 1.5;
-        margin: 0 auto;
-        padding: 3vw;
-
-        p {
-            text-align: center;
-        }
-
-        h1 {
-            text-align: center;
-        }
-    }
+  }
 }
