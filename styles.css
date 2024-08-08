@@ -252,90 +252,473 @@ button:hover {
 /* ================================================================================= */
 
 .profile-section {
-    text-align: center;
-    padding: 50px;
-    background-color: #ffffff;
-    color: #333333;
+  text-align: center;
+  padding: 50px;
+  background-color: #ffffff;
+  color: #333333;
 }
 
 .profile-section h1 {
-    color: #0056d2;
-    margin: 0 auto;
-    margin-bottom: 20px;
+  color: #0056d2;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .profile-section p {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    font-size: 18px;
-    line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .stats {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .stat {
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    padding: 20px;
-    width: 200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .stat h2 {
-    color: #f7941d;
-    margin: 0 0 10px;
-    font-size: 36px;
+  color: #f7941d;
+  margin: 0 0 10px;
+  font-size: 36px;
 }
 
 .stat p {
-    margin: 0;
-    font-size: 16px;
-    color: #666666;
+  margin: 0;
+  font-size: 16px;
+  color: #666666;
 }
 /* ================================================================================= */
 /*---------------------------------Code For coach-section--------------------------- */
 /* ================================================================================= */
 
 .coach-section {
-    text-align: center;
-    padding: 50px;
-    background-color: #f7f7f7;
-    color: #333333;
+  text-align: center;
+  padding: 50px;
+  background-color: #f7f7f7;
+  color: #333333;
 }
 
 .coach-section h1 {
-    color: #0056d2;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    font-size: 24px;
+  color: #0056d2;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .coach-section p {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #666666;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666666;
 }
-.coach-section-button{
-    background-color: yellow;
-    height: 60px;
-    width: 150px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
+.coach-section-button {
+  background-color: yellow;
+  height: 60px;
+  width: 150px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+/* ================================================================================= */
+/*---------------------------Code For masterclass-section--------------------------- */
+/* ================================================================================= */
+
+.masterclass-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.masterclass-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.text-content-master {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.text-content-master h2 {
+  color: #0b3dae;
+  font-size: 2.5em;
+}
+
+.text-content-master span {
+  font-weight: lighter;
+}
+
+.text-content-master ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1em;
+  color: #444;
+  line-height: 1.8;
+}
+
+.text-content-master ul li {
+  margin-bottom: 10px;
+}
+
+.register-button {
+  background-color: #f4842d;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.video-content {
+  flex: 1 1 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-content img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.play-button {
+  position: absolute;
+  font-size: 2.5em;
+  color: white;
+  background-color: rgba(244, 132, 45, 0.8);
+  border-radius: 50%;
+  padding: 10px 20px;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
 /* ================================================================================= */
-/*---------------------------------Code For courses-section--------------------------- */
+/*---------------------------Code For course-section-------------------------------- */
 /* ================================================================================= */
+
+.course-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #E9E9E9;
+}
+
+.course-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  background-color: #F4F4F4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-content {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-content img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.text-content-course {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.text-content-course h2 {
+  color: #0B3DAE;
+  font-size: 2em;
+}
+
+.text-content-course span {
+  font-weight: lighter;
+  color: #444;
+}
+
+.text-content-course ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1em;
+  color: #444;
+  line-height: 1.8;
+}
+
+.text-content-course ul li {
+  margin-bottom: 10px;
+}
+
+.register-button {
+  background-color: #F4842D;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* ================================================================================= */
+/*---------------------------Code For course-section--------------------------- */
+/* ================================================================================= */
+.testimonials-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.testimonials-section h2 {
+  color: #0b3dae;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-card {
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.video-thumbnail {
+  position: relative;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.testimonial-card p {
+  padding: 20px;
+  color: #0b3dae;
+  font-size: 1em;
+  margin: 0;
+}
+
+.register-button {
+  background-color: #f4842d;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+/* ================================================================================= */
+/*------------------------------Media Query for tablets----------------------------- */
+/* ================================================================================= */
+
+
+.faq-section {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f2f5;
+}
+
+.faq-title h2 {
+  font-size: 24px;
+  color: #0a57b6;
+}
+
+.faq-item {
+  border-top: 1px solid #ddd;
+}
+
+.faq-item:first-child {
+  border-top: none;
+}
+
+.faq-item-header {
+  padding: 15px;
+  background-color: #ff9e1b;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-item-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.faq-item-body {
+  display: none;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-item.active .faq-item-body {
+  display: block;
+}
+
+.faq-item-header span {
+  font-size: 18px;
+}
+
+
+
+
+
+/* ================================================================================= */
+/*------------------------------Media Query for tablets----------------------------- */
+/* ================================================================================= */
+
+.contact-section-wrapper{
+  width: 100%;
+  background-color: rgb(22, 45, 119); 
+}
+.contact-section {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: white;
+  background-color: rgb(22, 45, 119);
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.contact-box {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #163a7d;
+  border-radius: 8px;
+}
+
+.contact-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff9e1b;
+}
+
+.contact-box p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.contact-box a {
+  color: white;
+  text-decoration: none;
+
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-links div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.346);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 
 
 
@@ -433,6 +816,11 @@ button:hover {
   }
 }
 
+
+
+
+
+
 /* ================================================================================= */
 /*------------------------------Media Query for phones----------------------------- */
 /* ================================================================================= */
@@ -521,18 +909,60 @@ button:hover {
   }
   .stat {
     width: 100%;
-}
-.coach-section {
+  }
+  .coach-section {
     padding: 30px;
-}
+  }
 
-.coach-section h1 {
+  .coach-section h1 {
     font-size: 20px;
-}
+  }
 
-.coach-section p {
+  .coach-section p {
     font-size: 16px;
     margin: 0 auto 20px;
+  }
+  .text-content,
+  .video-content {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .text-content-master {
+    text-align: center;
+  }
+
+  .play-button {
+    font-size: 2em;
+    padding: 5px 10px;
+  }
+  .text-content-course, .video-content {
+    flex: 1 1 100%;
+    max-width: 100%;
 }
 
+  .text-content-course {
+    text-align: center;
+}
+.testimonials-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-card {
+  width: 100%;
+  max-width: 500px;
+}
+.contact-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-box {
+  margin: 10px 0;
+}
+
+.footer-links div {
+  min-width: 100%;
+}
 }
