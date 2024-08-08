@@ -248,46 +248,55 @@ button:hover {
 }
 
 /* ================================================================================= */
-/*---------------------------------Code For Intero Page----------------------------- */
+/*---------------------------------Code For profile-section------------------------- */
 /* ================================================================================= */
 
-.intero-page {
-  width: 50vw;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  line-height: 2;
-  margin: 0 auto;
-  padding: 4vw;
-
-  p {
+.profile-section {
     text-align: center;
-    color: gray;
-  }
-
-  h1 {
-    text-align: center;
-    color: rgb(4, 0, 255);
-  }
-}
-#box-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 10vw;
-  width: 70vw;
-  border: 1px solid red;
+    padding: 50px;
+    background-color: #ffffff;
+    color: #333333;
 }
 
-#box-wrapper .box {
-  display: flex;
-  width: 350px;
-  height: 100px;
-  border: 1px solid red;
+.profile-section h1 {
+    color: #0056d2;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
+.profile-section p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.stat {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat h2 {
+    color: #f7941d;
+    margin: 0 0 10px;
+    font-size: 36px;
+}
+
+.stat p {
+    margin: 0;
+    font-size: 16px;
+    color: #666666;
+}
 /* ================================================================================= */
 /*------------------------------Media Query for tablets----------------------------- */
 /* ================================================================================= */
@@ -463,20 +472,8 @@ button:hover {
   .text-content {
     left: 10%;
   }
+  .stat {
+    width: 100%;
+}
 
-  .intero-page {
-    width: 80vw;
-    border: 1px solid red;
-    line-height: 1.5;
-    margin: 0 auto;
-    padding: 3vw;
-
-    p {
-      text-align: center;
-    }
-
-    h1 {
-      text-align: center;
-    }
-  }
 }
