@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic reset and font styling */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* ================================================================================= */
+/*--------------------------------- Navbar styling---------------------------------- */
+/* ================================================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 70px;
+    padding: 3px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+    border-top: 1px solid rgba(106, 106, 106, 0.799);
+    border-bottom: 1px solid rgba(106, 106, 106, 0.799);
+    z-index: 3;
+    background-color: black;
+    /* Ensure it is above other content */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Navbar shadow for better separation */
+.navbar.scrolled {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for navbar items */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* Brand or logo styling */
+.brand img {
+    height: 60px;
+    width: 180px;
+    margin-right: 13px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(106, 106, 106, 0.799);
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-left: auto;
+    /* Push menu to the right */
+}
+
+.nav-container button {
+    background-color: yellow;
+    height: 50px;
+    width: 140px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 1px 10px;
+}
+
+/* Default toggle button style */
+.nav-toggle {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(243, 243, 243);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Cross state styles */
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ================================================================================= */
+/*------------------------------Bannar-section------------------------------------- */
+/* ================================================================================= */
+
+.banner {
+    background: linear-gradient(to right, #d8363a, #ff6200, #ff9b0e);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+  }
+  
+  .banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('path/to/your/logo.png') no-repeat center left;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: 1;
+  }
+  
+  .banner-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .banner h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 3vw;
+  }
+  
+  .banner p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+/* ================================================================================= */
+/*------------------------------cources-section------------------------------------- */
+/* ================================================================================= */
+.courses-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.courses-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.course-item {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-item:hover {
+    transform: scale(1.05);
+}
+
+.course-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+    transition: transform 0.5s ease;
+}
+
+
+
+.course-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.course-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.course-button:hover {
+    background-color: #0056b3;
+}
+
+/* ================================================================================= */
+/*------------------------------faq-section----------------------------------------- */
+/* ================================================================================= */
+
+
+.faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f2f5;
+}
+
+.faq-title h2 {
+    font-size: 24px;
+    color: #0a57b6;
+}
+
+.faq-item {
+    border-top: 1px solid #ddd;
+}
+
+.faq-item:first-child {
+    border-top: none;
+}
+
+.faq-item-header {
+    padding: 15px;
+    background-color: #ff9e1b;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-item-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.faq-item-body {
+    display: none;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-item.active .faq-item-body {
+    display: block;
+}
+
+.faq-item-header span {
+    font-size: 18px;
+}
+
+
+
+/* ================================================================================= */
+/*------------------------------contact section------------------------------------- */
+/* ================================================================================= */
+
+.contact-section-wrapper {
+    width: 100%;
+    background-color: rgb(22, 45, 119);
+}
+
+.contact-section {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: white;
+    background-color: rgb(22, 45, 119);
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contact-box {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #163a7d;
+    border-radius: 8px;
+}
+
+.contact-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ff9e1b;
+}
+
+.contact-box p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.contact-box a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-links div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.346);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* ================================================================================= */
+/*------------------------------Media Query for tablets----------------------------- */
+/* ================================================================================= */
+
+@media (max-width: 1024px) {
+
+
+    .nav-menu {
+        gap: 15px;
+        /* Reduce gap for tablets */
+    }
+
+    .nav-toggle {
+        display: flex;
+        /* Show toggle button on mobile */
+    }
+
+    /* Display the navigation menu when toggle button is active */
+    .nav-container.active .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        /* Adjust top position to prevent overlap with navbar */
+        right: 40px;
+        background-color: rgba(0, 0, 0, 0.818);
+        padding: 20px;
+        /* Increase padding for better touch targets */
+        border-radius: 5px;
+        width: 80%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container.active .nav-menu a {
+        color: rgb(234, 255, 0);
+        /* Change text color in mobile menu */
+        margin: 10px 0;
+        font-size: 1.2em;
+        /* Slightly larger font for readability */
+    }
+
+    /* Adjust toggle button color when scrolling */
+    .navbar.scrolled .nav-toggle span {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .nav-container {
+        width: 90%;
+    }
+
+    .nav-menu {
+        display: none;
+        /* Hide menu on mobile by default */
+    }
+}
+
+
+/* ================================================================================= */
+/*------------------------------Media Query for phones----------------------------- */
+/* ================================================================================= */
+
+@media (max-width: 768px) {
+
+    .nav-menu {
+        display: none;
+        /* Hide menu on mobile by default */
+    }
+
+    .nav-menu-button {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+        /* Show toggle button on mobile */
+    }
+
+    /* Display the navigation menu when toggle button is active */
+    .nav-container.active .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        /* Adjust top position to prevent overlap with navbar */
+        right: 40px;
+        background-color: rgba(0, 0, 0, 0.818);
+        padding: 20px;
+        /* Increase padding for better touch targets */
+        border-radius: 5px;
+        width: 80%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container.active .nav-menu a {
+        color: rgb(234, 255, 0);
+        /* Change text color in mobile menu */
+        margin: 10px 0;
+        font-size: 1.2em;
+        /* Slightly larger font for readability */
+    }
+
+    /* Adjust toggle button color when scrolling */
+    .navbar.scrolled .nav-toggle span {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .nav-container {
+        width: 90%;
+    }
+
+    .course-item {
+        width: 90%;
+        height: auto;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-box {
+        margin: 10px 0;
+    }
+
+    .footer-links div {
+        min-width: 100%;
+    }
+}
