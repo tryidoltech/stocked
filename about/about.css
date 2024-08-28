@@ -13,6 +13,7 @@ html {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
 /* Hide the scrollbar */
 ::-webkit-scrollbar {
   width: 0;
@@ -40,11 +41,13 @@ html {
   /* Ensure it is above other content */
   transition: background-color 0.3s, box-shadow 0.3s;
 }
+
 /* Navbar shadow for better separation */
 .navbar.scrolled {
   background-color: rgb(0, 0, 0);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 /* Container for navbar items */
 .nav-container {
   display: flex;
@@ -54,6 +57,7 @@ html {
   height: 100%;
   margin: 0 auto;
 }
+
 /* Brand or logo styling */
 .brand img {
   height: 60px;
@@ -67,6 +71,7 @@ html {
   justify-content: center;
   border-right: 1px solid rgba(106, 106, 106, 0.799);
 }
+
 /* Navigation menu styling */
 .nav-menu {
   display: flex;
@@ -93,6 +98,7 @@ html {
   font-size: 16px;
   padding: 1px 10px;
 }
+
 /* Default toggle button style */
 .nav-toggle {
   /* display: flex; */
@@ -101,12 +107,14 @@ html {
   gap: 5px;
   cursor: pointer;
 }
+
 .nav-toggle span {
   width: 30px;
   height: 3px;
   background-color: rgb(243, 243, 243);
   transition: transform 0.3s, opacity 0.3s;
 }
+
 /* Cross state styles */
 .nav-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
@@ -126,10 +134,11 @@ html {
 /*------------------------------contact section------------------------------------- */
 /* ================================================================================= */
 
-.contact-section-wrapper{
+.contact-section-wrapper {
   width: 100%;
-  background-color: rgb(22, 45, 119); 
+  background-color: rgb(22, 45, 119);
 }
+
 .contact-section {
   max-width: 70%;
   margin: 0 auto;
@@ -376,7 +385,8 @@ html {
 
 
 .custom-quote-section {
-  background-color: #f3f3f3; /* Background color similar to the pattern */
+  background-color: #f3f3f3;
+  /* Background color similar to the pattern */
   padding: 40px;
   display: flex;
   justify-content: center;
@@ -407,7 +417,8 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 6px solid #ff6600; /* Inner border color */
+  border: 6px solid #ff6600;
+  /* Inner border color */
   transform: rotate(-5deg);
   z-index: -1;
 }
@@ -418,7 +429,8 @@ html {
 
 .custom-quote-icon {
   font-size: 60px;
-  color: #c41c33; /* Quote icon color */
+  color: #c41c33;
+  /* Quote icon color */
   line-height: 0;
   margin-bottom: 10px;
 }
@@ -632,9 +644,11 @@ html {
   .text-content {
     left: 10%;
   }
+
   .stat {
     width: 100%;
   }
+
   .coach-section {
     padding: 30px;
   }
@@ -647,6 +661,7 @@ html {
     font-size: 16px;
     margin: 0 auto 20px;
   }
+
   .text-content,
   .video-content {
     flex: 1 1 100%;
@@ -661,55 +676,60 @@ html {
     font-size: 2em;
     padding: 5px 10px;
   }
-  .text-content-course, .video-content {
+
+  .text-content-course,
+  .video-content {
     flex: 1 1 100%;
     max-width: 100%;
-}
+  }
 
   .text-content-course {
     text-align: center;
-}
-.testimonials-container {
-  flex-direction: column;
-  align-items: center;
-}
+  }
 
-.testimonial-card {
-  width: 100%;
-  max-width: 500px;
-}
-.contact-container {
-  flex-direction: column;
-  align-items: center;
-}
+  .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.contact-box {
-  margin: 10px 0;
-}
+  .testimonial-card {
+    width: 100%;
+    max-width: 500px;
+  }
 
-.footer-links div {
-  min-width: 100%;
-}
-/* code for banner */
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.banner {
-  padding: 60px 20px;
-}
+  .contact-box {
+    margin: 10px 0;
+  }
 
-.banner h1 {
-  font-size: 28px;
-  margin-top: 7vh;
-  margin-left: 4vh;
-}
+  .footer-links div {
+    min-width: 100%;
+  }
 
-.about-us-content h2 {
-  font-size: 24px;
-}
+  /* code for banner */
 
-.about-us-content p {
-  font-size: 14px;
-}
+  .banner {
+    padding: 60px 20px;
+  }
 
-/* ---------------------- */
+  .banner h1 {
+    font-size: 28px;
+    margin-top: 7vh;
+    margin-left: 4vh;
+  }
+
+  .about-us-content h2 {
+    font-size: 24px;
+  }
+
+  .about-us-content p {
+    font-size: 14px;
+  }
+
+  /* ---------------------- */
 
 }
